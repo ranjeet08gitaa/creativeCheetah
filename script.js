@@ -2,16 +2,17 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-// Firebase Configuration (Replace with your own Firebase credentials)
+// Firebase Configuration using Environment Variables
 const firebaseConfig = {
-    apiKey: "AIzaSyAcJ-CMXya5pIwRieScZkmtbooGtRekKkI",
-    authDomain: "creativechitta-23080.firebaseapp.com",
-    databaseURL: "https://creativechitta-23080-default-rtdb.firebaseio.com",
-    projectId: "creativechitta-23080",
-    storageBucket: "creativechitta-23080.firebasestorage.app",
-    messagingSenderId: "619962842683",
-    appId: "1:619962842683:web:c82f496009934b51e4661e"
+    apiKey: process.env.APIKEY,
+    authDomain: process.env.AUTHDOMAIN,
+    databaseURL: process.env.DATABASEURL,
+    projectId: process.env.MESSAGINGSENDERID,
+    storageBucket: process.env.MESSAGINGSENDERID,
+    messagingSenderId: process.env.MESSAGINGSENDERID,
+    appId: process.env.APPID
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
