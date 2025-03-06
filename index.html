@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Servo Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>ESP32 Servo Motor Control</h2>
+
+        <label for="servoAngle" class="label">Select Servo Angle (0-180):</label>
+        <div class="slider-container">
+            <input type="range" id="servoAngle" min="0" max="180" value="90" oninput="updateSliderValue(this.value)">
+            <span id="sliderValue" class="slider-value">90°</span>
+        </div>
+
+        <button class="btn" onclick="setServoAngle()">Set Angle</button>
+
+        <h3>Current Servo Angle:</h3>
+        <p id="currentAngle" class="angle-display">Loading...</p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
